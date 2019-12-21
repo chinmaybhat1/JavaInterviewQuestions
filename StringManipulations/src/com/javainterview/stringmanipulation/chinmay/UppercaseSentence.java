@@ -1,4 +1,4 @@
-package com.javainterview.stringmanipulation;
+package com.javainterview.stringmanipulation.chinmay;
 
 /*
  * Program to convert leading characters in a sentence to upper case
@@ -11,7 +11,7 @@ public class UppercaseSentence {
 
 		String uppercaseSentence = getUpperCaseSentence(sentence);
 
-		System.out.println("Upper case sentence: " + uppercaseSentence);
+		System.out.println("Uppercase sentence: " + uppercaseSentence);
 	}
 
 	private static String getUpperCaseSentence(String sentence) {
