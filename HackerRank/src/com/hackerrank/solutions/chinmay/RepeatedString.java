@@ -9,9 +9,10 @@ public class RepeatedString {
 
 	static long repeatedString(String s, long n) {
 
-		int index = 0;
 		int substringLength = s.length();
+		long remainingLength = 0L;
 		long charaterCountOfA = 0L;
+		long totalRepeatedOccurance = 0L;
 
 		if (substringLength < 1 || substringLength > 100 || n < 1 || n > Math.pow(10, 12)) {
 			return charaterCountOfA;
@@ -21,20 +22,32 @@ public class RepeatedString {
 			return n;
 		}
 
-		for (int i = 0; i < n; i++) {
-			if (index > substringLength - 1) {
-				index = 0;
+		charaterCountOfA = getCharacterOccuranceOfA(s, substringLength);
+
+		totalRepeatedOccurance = charaterCountOfA * (n / substringLength);
+
+		remainingLength = n % substringLength;
+
+		totalRepeatedOccurance += getCharacterOccuranceOfA(s, remainingLength);
+
+		return totalRepeatedOccurance;
+	}
+
+	private static int getCharacterOccuranceOfA(String s, long substringLength) {
+
+		int charaterCountOfA = 0;
+		for (int i = 0; i < substringLength; i++) {
+			if ('a' == s.charAt(i)) {
+				charaterCountOfA++;
 			}
-			if ('a' == s.charAt(index)) {
-				charaterCountOfA += 1;
-			}
-			index++;
 		}
 
 		return charaterCountOfA;
 	}
 
 	public static void main(String[] args) {
+
+		RepeatedString rs = new RepeatedString();
 
 		long charactersToConsider = 872514961806L;
 		String inputString = "udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps";
