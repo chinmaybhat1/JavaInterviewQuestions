@@ -1,7 +1,7 @@
 package com.hackerrank.solutions.chinmay;
 
 /*
- * Problem Statement
+ * Warm-up Challenges
  * 
  * Link: https://www.hackerrank.com/challenges/repeated-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
  */
@@ -25,7 +25,6 @@ public class RepeatedString {
 		charaterCountOfA = getCharacterOccuranceOfA(s, substringLength);
 
 		totalRepeatedOccurance = charaterCountOfA * (n / substringLength);
-
 		remainingLength = n % substringLength;
 
 		totalRepeatedOccurance += getCharacterOccuranceOfA(s, remainingLength);
@@ -46,8 +45,6 @@ public class RepeatedString {
 	}
 
 	public static void main(String[] args) {
-
-		RepeatedString rs = new RepeatedString();
 
 		long charactersToConsider = 872514961806L;
 		String inputString = "udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps";

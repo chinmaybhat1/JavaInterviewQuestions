@@ -1,7 +1,7 @@
 package com.hackerrank.solutions.chinmay;
 
 /*
- * Problem Statement
+ * Warm-up Challenges
  * 
  * Link: https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
  */
@@ -38,10 +38,12 @@ public class CountingValley {
 				}
 			}
 		}
+		
 		return vallyCount;
 	}
 
 	public static void main(String[] args) {
+		
 		int numberOfSteps = 8;
 		String path = "UDDDUDUUDUDU";
 
